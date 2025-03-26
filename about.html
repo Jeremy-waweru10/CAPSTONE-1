@@ -11,25 +11,47 @@
 
 <body class="bg-gray-100 text-gray-900">
 
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-gray-900 text-white flex justify-between items-center px-8 py-4 z-50">
-        <div class="container mx-auto flex text-center justify-between">
-            <h1 class="text-3xl font-bold flex items-center">JEREMIANA'S THRIFT STORE</h1>
-            <nav>
-       
-                <ul class="flex justify-center space-x-6 ">
-                    <li><a href="index.html" class="hover:text-red-500">Home</a></li>
-                    <li><a href="shop.html" class="hover:text-red-500">Shop</a></li>
-                    <li><a href="about.html" class="hover:text-red-500">About</a></li>
-                    <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
-                </ul>   
-            </nav>
-        </div>
-    </header>
+   <!-- Header -->
+   <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center">
 
+        <!-- Logo -->
+        <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="shop.html" class="hover:text-red-500">Shop</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+        <a href="index.html" class="block hover:text-red-500">Home</a>
+        <a href="shop.html" class="block hover:text-red-500">Shop</a>
+        <a href="about.html" class="block hover:text-red-500">About</a>
+        <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+    </nav>
+</header>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
     <!-- About Us Section -->
-    <section class="container mx-auto p-4 mt-12">
-        <h2 class="text-4xl font-semibold text-center mb-12">About Us</h2>
+    <section class="container mx-auto p-8 mt-20">
+        <h2 class="text-4xl font-semibold text-center mb-8">About Us</h2>
 
         <!-- Thrift Store  History -->
         <div class="flex flex-col md:flex-row items-center mb-16 space-y-8 md:space-y-0 md:space-x-12">
@@ -128,4 +150,5 @@
                 <a href="contact.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-square-instagram"></i></a>
 
             </div>
+        </body>
 </html>

@@ -12,20 +12,36 @@
 <body class="bg-gray-100 text-gray-900">
 
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-gray-900 text-white flex justify-between items-center px-8 py-4 z-50">
-        <div class="container mx-auto flex text-center justify-between">
-            <h1 class="text-3xl font-bold flex items-center">JEREMIANA'S THRIFT STORE</h1>
-            <nav>
-       
-                <ul class="flex justify-center space-x-6 ">
-                    <li><a href="index.html" class="hover:text-red-500">Home</a></li>
-                    <li><a href="shop.html" class="hover:text-red-500">Shop</a></li>
-                    <li><a href="about.html" class="hover:text-red-500">About</a></li>
-                    <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
-                </ul>   
+    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+
+            <!-- Logo -->
+            <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-red-500">Home</a>
+                <a href="shop.html" class="hover:text-red-500">Shop</a>
+                <a href="about.html" class="hover:text-red-500">About</a>
+                <a href="contact.html" class="hover:text-red-500">Contact Us</a>
             </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+            <a href="index.html" class="block hover:text-red-500">Home</a>
+            <a href="shop.html" class="block hover:text-red-500">Shop</a>
+            <a href="about.html" class="block hover:text-red-500">About</a>
+            <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+        </nav>
     </header>
+
+
 
     <!-- Contact Section -->
     <section class="container mx-auto p-8 mt-20">
@@ -39,32 +55,34 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-            <h3 class="text-2xl font-semibold mb-6">Contact Form</h3>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="name" class="block text-lg font-medium mb-2">Name:</label>
-                    <input type="text" id="name" name="name" required
-                        class="w-full p-3 border rounded-lg focus:ring focus:ring-red-500">
-                </div>
+<div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <h3 class="text-2xl font-semibold mb-6">Contact Form</h3>
+    <form action="#" method="POST" class="space-y-6">
+        <div>
+            <label for="name" class="block text-lg font-medium mb-2">Name:</label>
+            <input type="text" id="name" name="name" required
+                class="w-full p-3 border rounded-lg focus:ring focus:ring-red-500">
+        </div>
 
-                <div>
-                    <label for="email" class="block text-lg font-medium mb-2">Email:</label>
-                    <input type="email" id="email" name="email" required
-                        class="w-full p-3 border rounded-lg focus:ring focus:ring-red-500">
-                </div>
+        <div>
+            <label for="email" class="block text-lg font-medium mb-2">Email:</label>
+            <input type="email" id="email" name="email" required
+                class="w-full p-3 border rounded-lg focus:ring focus:ring-red-500">
+        </div>
 
-                <div>
-                    <label for="message" class="block text-lg font-medium mb-2">Message:</label>
-                    <textarea id="message" name="message" rows="5" required
-                        class="w-full p-3 border rounded-lg focus:ring focus:ring-red-500"></textarea>
-                </div>
+        <div>
+            <label for="message" class="block text-lg font-medium mb-2">Message:</label>
+            <textarea id="message" name="message" rows="5" required
+                class="w-full p-3 border rounded-lg focus:ring focus:ring-red-500"></textarea>
+        </div>
 
-                <button type="submit"
-                    class="bg-red-500 text-white py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300">
-                    Submit
-                </button>
-            </form>
+        <button type="submit" value="Submit" onclick="welcomeMsg()"
+            class="bg-red-500 text-white py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300">
+            Submit
+        </button>
+        
+    </form>  
+<script type ="text/javascript" src="script.js"></script>
         </div>
 
     </section>
@@ -102,4 +120,5 @@
                 <a href="contact.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-square-instagram"></i></a>
 
             </div>
+        </body>
 </html>  
