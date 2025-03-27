@@ -13,7 +13,7 @@ function onSubmit (){
 
     function welcomeMsg(name) {
         name = "Customer"
-        alert ("Hello" + name + "!" + "welcome to our website");
+        alert ("Form submitted successfully!");
     }
 
     function cart(name) {
