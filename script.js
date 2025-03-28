@@ -14,6 +14,7 @@ function onSubmit (){
     function welcomeMsg(name) {
         name = "Customer"
         alert ("Form submitted successfully!");
+        window.location.href = "index.html";
     }
 
     function cart(name) {
